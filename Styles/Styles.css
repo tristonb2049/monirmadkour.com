@@ -40,7 +40,7 @@
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: black;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -63,6 +63,20 @@
     .sidebar a {font-size: 18px;}
 }
 body{
-    background-color: black;
+    background-color: black !important;
     color: white;
+}
+.titleContainer{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    
+}
+#title{
+    font-size: 60px;
+    font-family: 'Gayathri', sans-serif;
+    color: white;
+    letter-spacing: 10px;
+    padding-top: 15px;
+    background-color: #0f0f0f;
 }
