@@ -58,10 +58,7 @@
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-}
+
 body{
     background-color: black !important;
     color: white;
@@ -74,27 +71,11 @@ body{
     letter-spacing: 18px;
     padding-top: 15px;
     background-color: black;
-    
-    margin: 0 auto;
-    width: 100%;
     text-align: center;
-
 }
-.wrapper{
-    width: 100%;
-}
-
-
-@media only screen and (min-width: 768px) {
-
-
-    .wrapper {width: 600px; margin: 0 auto;}
-
-    #main {padding: 20px 0 0;}
+.intro{
+    color: #999;
 }
 
-@media only screen and (min-width: 1000px){
-    .wrapper{
-        width: 100%;}
-}
-#main{padding: 20px 0 0;}
+
+
