@@ -4,7 +4,7 @@
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 0;
+    top: 0px;
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -70,12 +70,27 @@ body{
     color: white;
     letter-spacing: 18px;
     padding-top: 15px;
-    background-color: black;
+    background-color: #111;
     text-align: center;
+    
 }
 .intro{
     color: #999;
 }
-
-
-
+.homeImage{
+    max-height: 100%;
+    max-width: 100%;
+}
+#headerColor1{
+    background-color: #111 !important;
+}
+#headerColor2{
+    background-color: #111 !important;
+}
+.homepageText{
+    color: #999999;
+    margin-top: 45px;
+}
+#imageDescriptor{
+    margin-top: 1px;
+}
