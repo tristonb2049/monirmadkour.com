@@ -35,7 +35,9 @@
     font-size: 36px;
     margin-left: 50px;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 /* The button used to open the sidebar */
 .openbtn {
     font-size: 20px;
@@ -62,7 +64,7 @@
 body{
     background-color: black !important;
     color: white;
-    overflow-x: hidden;
+    position: relative
 }
 
 #title{
