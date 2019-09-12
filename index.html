@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <title>MONIR'S WEBSITE</title>
     <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
     <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
 </head>
 <body>
 
@@ -55,6 +57,30 @@
                 </div>
             </div>
         </div>
-<script type="text/javascript" src="Scripts/Scripts.js"></script>
+        
+        
+        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase.js"></script>
+        
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDur96trCr88JaUU0p8niFwI7-GTjWt6bA",
+                authDomain: "monir-web.firebaseapp.com",
+                databaseURL: "https://monir-web.firebaseio.com",
+                projectId: "monir-web",
+                storageBucket: "",
+                messagingSenderId: "883934373732",
+                appId: "1:883934373732:web:4956f9e342c5bb42d1bc71"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+          
+            
+        </script>
+        <script type="text/javascript" src="Scripts/Scripts.js"></script>
+        
 </body>
 </html>
