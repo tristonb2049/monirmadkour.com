@@ -12,5 +12,15 @@ function closeNav() {
 }
 
 
-
+function toggleContainer(){
+    var toggle = document.getElementById("educationContainer");
+    if(toggle.style.width === "300px"){
+        toggle.style.width = "0";
+        toggle.style.marginBottom = "0";
+    }
+    else{
+        toggle.style.width = "300px";
+        toggle.style.marginBottom = "300px";
+    }
+}
 

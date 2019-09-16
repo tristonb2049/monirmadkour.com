@@ -84,16 +84,46 @@ body{
     max-height: 100%;
     max-width: 100%;
 }
-#headerColor1{
+.headerColor1{
     background-color: #111 !important;
 }
-#headerColor2{
+.headerColor2{
     background-color: #111 !important;
 }
-.homepageText{
+.pageText{
     color: #999999;
     margin-top: 45px;
+    text-align: justify;
+    font-size: 18px;
 }
 #imageDescriptor{
     margin-top: 1px;
+}
+#bioDescriptor{
+    text-align: justify;
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+#Education{
+    color: white;
+    
+}
+.resumeButton{
+    background-color: black;
+    border: 0;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+.educationContainers{
+     /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    bottom: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s;
 }
