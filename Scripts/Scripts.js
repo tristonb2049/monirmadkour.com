@@ -11,16 +11,7 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
 }
 
-
-function toggleContainer(){
-    var toggle = document.getElementById("educationContainer");
-    if(toggle.style.width === "300px"){
-        toggle.style.width = "0";
-        toggle.style.marginBottom = "0";
-    }
-    else{
-        toggle.style.width = "300px";
-        toggle.style.marginBottom = "300px";
-    }
+function rotateOpen(){
+    document.getElementsByClassName("rotateButton").style.rotate = "180";
+    
 }
-

@@ -102,7 +102,8 @@ body{
 #bioDescriptor{
     text-align: justify;
     margin-top: 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    font-size: 18px;
 }
 #Education{
     color: white;
@@ -116,14 +117,48 @@ body{
     margin: 0;
     font-size: 20px;
 }
-.educationContainers{
-     /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    bottom: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s;
+
+#bioImage{
+    margin-top: 6px;
+}
+.collapsible {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding-bottom: 15px;
+    width: 100%;
+    padding-top: 15px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 28px;
+    padding-left: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-bottom: 2px solid black;
+    border-radius: 4px;
+}
+
+.content {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: black;
+    color: #818181;
+    text-align: justify-all;
+    font-family: 'Roboto Condensed', sans-serif;
+    border: none;
+    border-radius: 3px;
+    
+}
+.education{
+    margin-top: 100px;
+}
+.downArrow{
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 10px;
+    font-weight: bold;
 }

@@ -5,6 +5,7 @@
     <title>MONIR'S WEBSITE</title>
     <link rel="stylesheet" type="text/css" href="../Styles/Styles.css">
     <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -46,13 +47,71 @@
                     Alfred University as a graduate student in Sculpture and Dimensional Studies. At Alfred he has
                     expanded his repertoire and investigates video, performance, as well as installation art.</p>
             </div>
-            <div class="col-xl-12 col-lg-12 col-md-12">
-                <h3 id="Education">Education<button class="resumeButton" onclick="toggleContainer()">&#9662;</button></h3>
-                <div id="educationContainer" class="educationContainers">
-                <p class="pageText" >2019 MFA Candidate Sculpture & Dimensional Studies, NYSCC at Alfred University <br/>
-                    2012 BS in Biology - Minors in Art, Chemistry and Philosophy, University of Miami - Coral Gables, FL</p>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12 text-left">
+                <img src="../Images/bioImage.jpg"  id="bioImage" class="homeImage" alt="BioDescriptor"/>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-xs-12 education">
+                <button class="collapsible">EDUCATION  <span class="downArrow">&#9660;</span></button>
+                <div class="content">
+                    <p>2019 MFA Candidate Sculpture & Dimensional Studies, NYSCC at Alfred University</p>
+                <p>2012 BS in Biology - Minors in Art, Chemistry and Philosophy, University of Miami - Coral Gables, FL</p>
+                </div>
+                <button class="collapsible rotateButton">PROFESSIONAL EXPERIENCE  <span class="downArrow">&#9660;</span></button>
+                <div class="content">
+                    <p>2019 Hotshop Coordinator, Pilchuck Glass School – Stanwood, WA</p>
+                    <p>2019 Assistant Glassblower to Angus Powers – Alfred University</p>
+                    <p>2019 Teaching Assistant to Angus Powers, Summer Glass – Alfred University</p>
+                    <p>2019 Teaching Assistant to Angus Powers, Advanced Glass – Alfred University</p>
+                    <p>2018 Teaching Assistant to Angus Powers, Intro to Glass – Alfred University</p>
+                    <p>2018 Instructor, Liberal Arts Beginning Glass – Alfred University</p>
+                    <p>2017 Teaching Assistant to Aric Snee, Intro to Glass – Alfred University</p>
+                    <p>2017 Workshop Instructor at The Benzaiten Center for the Creative Arts – Lake Worth, FL</p>
+                    <p>2017 Assistant Glassblower to Rick Eggert, Benzaiten Center for the Creative Arts – Lake Worth, FL</p>
+                    <p>2016 Co-Instructor with Jenna Efrein, Teen outreach program – University of Miami</p>
+                    <p>2016 Studio Assistant to Jenna Efrein – Miami, FL</p>
+                    <p>2016 Hotshop Coordinator, Pilchuck Glass School – Standwood, WA</p>
+                    <p>2015 Teaching Assistant to Rob Stern, Penland School of Craft – Penland, NC</p>
+                    <p>2015 Hotshop Intern, Pilchuck Glass School – Stanwood, WA</p>
+                    <p>2014 Night Monitor, Pilchuck Glass School – Stanwood WA</p>
+                    <p>2014 Instructor and Assistant Glassblower to Brenna Baker, Hollywood Hot Glass – Hollywood, FL</p>
+                    <p>2013 Auction Intern, Pilchuck Glass School – Stanwood, WA</p>
+                    <p>2013 Maintenance Intern, Pilchuck Glass School – Stanwood, WA</p>
+                    <p>2012 Studio Assistant to Rob Stern, Rob Stern Art Glass Inc. – Miami, FL</p>
+                    <p>2012 Assistant Glassblower to Matthew Miller, Nickel Glass – Miami, FL</p>
+                </div>
+                <button class="collapsible">SELECTED EXHIBITIONS / SOLO*  <span onclick="rotateOpen()" class="downArrow">&#9660;</span></button>
+                <div class="content">
+                    <p>2019 The Invaders Fear of Memories, Fosdick Nelson Gallery – Alfred, NY *</p>
+                    <p>2018 Outsiders, The Old Post Office – Hornell, NY</p>
+                    <p>2017 Pop-up Show, Turner Gallery, Alfred University – Alfred, NY</p>
+                    <p>2015 Selected Works, Penland School of Craft - Penland, NC</p>
+                </div>
+                <button class="collapsible">PANELS + AWARDS + GUEST LECTURER  <span class="downArrow">&#9660;</span></button>
+                <div class="content">
+                    <p>2019 Guest Lecturer: Gender and Art History ~ Feminist Art in a Global Frame – Alfred University</p>
+                    <p>2019 Panelist: Human Flow, Globalization and Artists’ Interventions – Alfred University</p>
+                    <p>2019 Nominee: ISC Outstanding Student Achievement in Contemporary Sculpture – Alfred, NY</p>
+                    <p>2018 Panelist: The Role of Empathy - Alfred University – Alfred, NY</p>
+                    <p>2017 Full Tuition Scholarship and Stipend, Alfred University - Alfred, NY</p>
+                    <p>2016 Partner Scholarship, Pilchuck Glass School, University of Miami – Miami, FL</p>
                 </div>
             </div>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.maxHeight){
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
         </div>
     </div>
 </div>
