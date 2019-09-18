@@ -12,7 +12,7 @@ var app_firebase = {};
     };
 // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-
+    var database = firebase.database();
     app_firebase = firebase;
 })()
 

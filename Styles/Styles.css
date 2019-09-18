@@ -163,3 +163,8 @@ body{
     padding-bottom: 10px;
     font-weight: bold;
 }
+#authMessage{
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+}

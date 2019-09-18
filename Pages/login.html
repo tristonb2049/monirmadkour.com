@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="Styles/Styles.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/Styles.css">
     <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +13,15 @@
 <body>
 
 
-
-<h1>Welcome to My Awesome App</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12 col-xs-12">
+<h1 id="authMessage">Administrative Login</h1>
 <div id="firebaseui-auth-container"></div>
 <div id="loader">Loading...</div>
+        </div>
+</div>
+</div>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
@@ -24,57 +29,14 @@
 <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
 <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<script type="text/javascript" src="../Scripts/fireBase.js"></script>
+<script type="text/javascript" src="../Scripts/login.js"></script>
 
 <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyCMpsNAT0eT5xJ3TjaqNa2NhFdYIYo5VtQ",
-        authDomain: "monir-madkour.firebaseapp.com",
-        databaseURL: "https://monir-madkour.firebaseio.com",
-        projectId: "monir-madkour",
-        storageBucket: "",
-        messagingSenderId: "358993289125",
-        appId: "1:358993289125:web:05b944eeb582c62c59924c"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+    
 </script>
 
-
-<script>
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    var uiConfig = {
-        callbacks: {
-            signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-                // User successfully signed in.
-                // Return type determines whether we continue the redirect automatically
-                // or whether we leave that to developer to handle.
-                return true;
-            },
-            uiShown: function() {
-                // The widget is rendered.
-                // Hide the loader.
-                document.getElementById('loader').style.display = 'none';
-            }
-        },
-        // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-        signInFlow: 'popup',
-        signInSuccessUrl: '../index.html',
-        signInOptions: [
-            // Leave the lines as is for the providers you want to offer your users.
-
-            firebase.auth.EmailAuthProvider.PROVIDER_ID
-
-        ],
-        // Terms of service url.
-        tosUrl: '<your-tos-url>',
-        // Privacy policy url.
-        privacyPolicyUrl: '<your-privacy-policy-url>'
-    };
-
-    ui.start('#firebaseui-auth-container', uiConfig);
-
-</script>
+   
 
 
 
