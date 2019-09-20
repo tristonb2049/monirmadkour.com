@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\tblan\.Rider2019.1\config\javascript\extLibs\http_cdn.firebase.com_libs_firebaseui_3.5.2_firebaseui.js" t="IncludeRecursive" />
+    <e p="C:\Users\tblan\.Rider2019.1\config\javascript\extLibs\http_www.gstatic.com_firebasejs_6.6.0_firebase-app.js" t="IncludeRecursive" />
+    <e p="C:\Users\tblan\.Rider2019.1\config\javascript\extLibs\http_www.gstatic.com_firebasejs_6.6.0_firebase-auth.js" t="IncludeRecursive" />
+    <e p="C:\Users\tblan\.Rider2019.1\config\javascript\extLibs\http_www.gstatic.com_firebasejs_6.6.0_firebase-firestore.js" t="IncludeRecursive" />
+    <e p="C:\Users\tblan\.Rider2019.1\config\javascript\extLibs\http_www.gstatic.com_firebasejs_6.6.0_firebase.js" t="IncludeRecursive" />
+    <e p="C:\Users\tblan\.Rider2019.1\config\javascript\extLibs\http_www.gstatic.com_firebasejs_6.6.1_firebase-app.js" t="IncludeRecursive" />
+    <e p="C:\Users\tblan\.Rider2019.1\config\javascript\nodejs\10.16.3\core-modules" t="IncludeRecursive" />
+    <e p="C:\Users\tblan\.Rider2019.1\config\javascript\nodejs\10.16.3\node-typings\node_modules\@types" t="IncludeRecursive" />
+    <e p="C:\Users\tblan\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\tblan\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\tblan\Desktop\SeniorProject" t="IncludeFlat" />
+  </component>
+</project>
