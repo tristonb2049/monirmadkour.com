@@ -1,6 +1,6 @@
 
 
-//var app_login = {};
+// var app_login = {};
 (function(){
     
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -35,4 +35,12 @@ var uiConfig = {
 
 ui.start('#firebaseui-auth-container', uiConfig);
 
-})()
+})();
+
+
+//logout JS
+firebase.auth().signOut().then(function() {
+    console.log('Signed Out');
+}, function(error) {
+    console.error('Sign Out Error', error);
+});
