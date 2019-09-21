@@ -1,3 +1,10 @@
+
+//Listen for authorization changes
+firebase.auth().onAuthStateChanged(user => {
+    console.log(user);
+})
+
+
 //sign-in
 
 const loginForm = document.querySelector('#login-form');
@@ -27,7 +34,7 @@ function redirect(){
             setTimeout(redirect, 4000);
         }
     });
-  */  
+  */   
 //logout
 const logout = document.querySelector('#logout');
 if(logout) {
