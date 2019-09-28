@@ -25,7 +25,13 @@
     <div id="mySidebar" class="sidebar">
     
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Artwork</a>
+        <button class="dropdown-btn" id="dropButton">Artwork<span style="padding-left: 5px;" class="downArrow">&#9660;</span>
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="Pages/pictures.html">Photos</a>
+            <a href="Pages/videos.html">Videos</a>
+        </div>
         <a href="Pages/Contact.html">Contact</a>
         <a href="Pages/Bio.html">My Bio</a>
         <a href="index.html">Home</a>
@@ -86,5 +92,23 @@
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
         <script type="text/javascript" src="Scripts/Scripts.js"></script>
         <script type="text/javascript" src="Scripts/auth.js"></script>
+        <script>
+
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+        </script>
 </body>
 </html>
