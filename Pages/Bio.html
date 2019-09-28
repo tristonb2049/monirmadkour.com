@@ -24,8 +24,13 @@
 
         
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Artwork</a>
-            <a href="Contact.html">Contact</a>
+            <button class="dropdown-btn" id="dropButton">Artwork<span style="padding-left: 5px;" class="downArrow">&#9660;</span>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="pictures.html">Photos</a>
+                <a href="videos.html">Videos</a>
+            </div>
             <a href="Bio.html">My Bio</a>
             <a href="../index.html">Home</a>
         
@@ -119,5 +124,23 @@
 
 
 <script type="text/javascript" src="../Scripts/Scripts.js"></script>
+<script>
+
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+</script>
 </body>
 </html>
