@@ -1,6 +1,6 @@
 //Get data
-firebase.firestore().collection('captions').get().then(snapshot => {
-    console.log(snapshot.docs);
+firebase.firestore().collection('photos').get().then(snapshot => {
+    setupGuides(snapshot.docs);
 });
 
 
