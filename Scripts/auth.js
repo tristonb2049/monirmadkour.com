@@ -1,17 +1,19 @@
-//Get data
-firebase.firestore().collection('photos').get().then(snapshot => {
-    setupGuides(snapshot.docs);
-});
-
+//setup UI
 
 
 //Listen for authorization changes
 firebase.auth().onAuthStateChanged(user => {
     if(user){
-        console.log('User logged in: ', user);
+        //Get data, calls function in login.js 'setupGuides'
+    firebase.firestore().collection('photos').get().then(snapshot => {
+    setupGuides(snapshot.docs);
+    setupUI(user);
+    console.log(user);
+    });
     }
     else{
-        console.log('User Logged out');
+        setupUI();
+        setupGuides([]);
     }
 });
 

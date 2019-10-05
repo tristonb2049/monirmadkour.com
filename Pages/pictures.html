@@ -34,6 +34,7 @@
         </div>
         <a href="Bio.html">My Bio</a>
         <a href="../index.html">Home</a>
+
     </div>
 </div>
         <button class="openbtn" onclick="openNav()">&#9776;</button>
@@ -64,9 +65,12 @@
             </div>
 
         <div class="container">
-                <div class="col-xl-12 text-right admin" >
-                    <a href="index.html" id="logout">Logout</a>
-                    <a href="login.html">Admin</a>
+                <div class="col-xl-12 text-right admin">
+                    
+                </div>
+                
+                <div class="col-xl-12" >
+                   <button class="btn btn-dark logged-in text-center" id="logout" onclick="window.location.reload();" style="display:none;"> Logout</button> 
                 </div>
             </div>
         </div>
@@ -94,9 +98,10 @@
             
         </script>
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <script type="text/javascript" src="../Scripts/auth.js"></script>
         <script type="text/javascript" src="../Scripts/Scripts.js"></script>
         <script type="text/javascript" src="../Scripts/login.js"></script>
-        <script type="text/javascript" src="../Scripts/auth.js"></script>
+        
         <script>
 
 
