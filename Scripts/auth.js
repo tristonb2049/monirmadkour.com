@@ -1,19 +1,23 @@
 //setup UI
 
 
+
+
+//Read data from DB and display to all users
+firebase.firestore().collection('photos').get().then(snapshot => {
+    setupGuides(snapshot.docs);
+    
+    });
+
 //Listen for authorization changes
 firebase.auth().onAuthStateChanged(user => {
     if(user){
         //Get data, calls function in login.js 'setupGuides'
-    firebase.firestore().collection('photos').get().then(snapshot => {
-    setupGuides(snapshot.docs);
-    setupUI(user);
-    console.log(user);
-    });
+        setupUI(user);
+        console.log(user);
     }
     else{
         setupUI();
-        setupGuides([]);
     }
 });
 
