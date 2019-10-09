@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -40,7 +42,36 @@
 
         <button class="openbtn" onclick="openNav()">&#9776;</button>
         <div id="main">
-            <h5 class="logged-in" id="sculptureTitle" style="display:none;"">+ Upload New Image</h1>
+            <button type="button" class="btn btn-info btn-sm logged-in" style="display: none;" data-toggle="modal" data-target="#myModal">+Upload</button>
+        
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog modal-dialog-center">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title" style="text-align: center !important;">Post a New Scultpure</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <label class="upload-group">
+                    <input type="file" class="upload-group" id="file">
+                  </label>
+                </div>
+          
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="uploadButton" onclick="uploadFile()">Submit</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+            
+          
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-xs-12 imageGrid">
@@ -150,32 +181,34 @@
             </div>
         </div>
         
+      </div>
 
 
-
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
-        <!-- Add Firebase products that you want to use -->
-        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
-        <script>
-            var firebaseConfig = {
-                apiKey: "AIzaSyCMpsNAT0eT5xJ3TjaqNa2NhFdYIYo5VtQ",
-                authDomain: "monir-madkour.firebaseapp.com",
-                databaseURL: "https://monir-madkour.firebaseio.com",
-                projectId: "monir-madkour",
-                storageBucket: "",
-                messagingSenderId: "358993289125",
-                appId: "1:358993289125:web:05b944eeb582c62c59924c"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            
-        </script>
-        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-storage.js"></script>
+      <script>
+          var firebaseConfig = {
+              apiKey: "AIzaSyCMpsNAT0eT5xJ3TjaqNa2NhFdYIYo5VtQ",
+              authDomain: "monir-madkour.firebaseapp.com",
+              databaseURL: "https://monir-madkour.firebaseio.com",
+              projectId: "monir-madkour",
+              storageBucket: "monir-madkour.appspot.com",
+              messagingSenderId: "358993289125",
+              appId: "1:358993289125:web:05b944eeb582c62c59924c"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          var storage = firebase.storage();
+          
+      </script>
+      <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
         <script type="text/javascript" src="../Scripts/auth.js"></script>
         <script type="text/javascript" src="../Scripts/Scripts.js"></script>
         <script type="text/javascript" src="../Scripts/login.js"></script>
+        <script type="text/javascript" src="../Scripts/crud.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
 

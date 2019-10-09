@@ -71,24 +71,27 @@
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
         <!-- Add Firebase products that you want to use -->
-        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-storage.js"></script>
         <script>
             var firebaseConfig = {
                 apiKey: "AIzaSyCMpsNAT0eT5xJ3TjaqNa2NhFdYIYo5VtQ",
                 authDomain: "monir-madkour.firebaseapp.com",
                 databaseURL: "https://monir-madkour.firebaseio.com",
                 projectId: "monir-madkour",
-                storageBucket: "",
+                storageBucket: "monir-madkour.appspot.com",
                 messagingSenderId: "358993289125",
                 appId: "1:358993289125:web:05b944eeb582c62c59924c"
             };
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
+            var storage = firebase.storage();
             
         </script>
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
         <script type="text/javascript" src="Scripts/Scripts.js"></script>
+        <script type="text/javascript" src="Scripts/crud.js"></script>
         <!--
         <script type="text/javascript" src="Scripts/login.js"></script>
         <script type="text/javascript" src="Scripts/auth.js"></script>
