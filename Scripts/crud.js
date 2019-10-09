@@ -16,7 +16,18 @@ function uploadFile()  {
 
     }, function() {
 
+    var postkey = firebase.database().ref("Posts/").push().key;
     var downloadURL = uploadTask.snapshot.downloadURL;
+    var updates = {};
+    var postData = {
+        url: downloadURL,
+        title: $('#imageTitle'),
+        medium: $('#imageMedium'),
+        dimensions: $('#imageDimensions'),
+        year: $('#imageYear')
+    }
+    updates['/Posts/'+postkey] = postData;
+    firebase.database().ref().update(updates);
     console.log(downloadURL);
 
 

@@ -285,7 +285,7 @@ to {transform:scale(1)}
 }
 
 /* The Close Button */
-.close {
+.closeModal {
 position: absolute;
 top: 15px;
 right: 35px;
