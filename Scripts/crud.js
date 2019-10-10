@@ -1,3 +1,5 @@
+/*UPLOAD FILES -- PICTURES*/
+
 var selectedFile;
 
 $("#file").on("change", function(event){
@@ -40,5 +42,6 @@ function uploadFile()  {
     });
 });
 
-    
 }
+
+/*READ FILES - PICTURES*/
