@@ -14,25 +14,31 @@ function uploadFile()  {
 
     }, function(error){
 
-    }, function() {
-
-    var postkey = firebase.database().ref("Posts/").push().key;
-    var downloadURL = uploadTask.snapshot.downloadURL;
-    var updates = {};
-    var postData = {
-        url: downloadURL,
-        title: $('#imageTitle'),
-        medium: $('#imageMedium'),
-        dimensions: $('#imageDimensions'),
-        year: $('#imageYear')
-    }
-    updates['/Posts/'+postkey] = postData;
-    firebase.database().ref().update(updates);
-    console.log(downloadURL);
-
-
-    });
+    }, async function() {
+    
+    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
+        console.log('File avaiable at', downloadURL)
     
 
 
+
+
+    
+    var postkey = firebase.database().ref().child('Posts/').push().key;
+    
+    var updates = {};
+    var postData = {
+        url: downloadURL,
+        title: $('#imageTitle').val(),
+        medium: $('#imageMedium').val(),
+        dimensions: $('#imageDimensions').val(),
+        year: $('#imageYear').val()
+    };
+    updates['/Posts/' + postkey] = postData;
+    firebase.database().ref().update(updates);
+    
+    });
+});
+
+    
 }

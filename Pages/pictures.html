@@ -53,11 +53,16 @@
                 <div class="modal-header">
                   <h4 class="modal-title" style="text-align: center !important;">Post a New Scultpure</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  
                 </div>
           
                 <!-- Modal body -->
                 <div class="modal-body">
                   <label class="upload-group">
+                      <input type="text" id="imageTitle" placeholder="Title">
+                      <input type="text" id="imageMedium" placeholder="Medium">
+                      <input type="text" id="imageDimensions" placeholder="Dimensions">
+                      <input type="text" id="imageYear" placeholder="Year">
                     <input type="file" class="upload-group" id="file">
                   </label>
                 </div>
@@ -189,6 +194,7 @@
       <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-storage.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
       <script>
           var firebaseConfig = {
               apiKey: "AIzaSyCMpsNAT0eT5xJ3TjaqNa2NhFdYIYo5VtQ",
