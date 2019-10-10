@@ -1,8 +1,3 @@
-//setup UI
-
-
-
-
 //Read data from DB and display to all users
 firebase.firestore().collection('photos').get().then(snapshot => {
     setupGuides(snapshot.docs);
@@ -11,10 +6,12 @@ firebase.firestore().collection('photos').get().then(snapshot => {
 
 //Listen for authorization changes
 firebase.auth().onAuthStateChanged(user => {
+
     if(user){
         //Get data, calls function in login.js 'setupGuides'
         setupUI(user);
         console.log(user);
+        
     }
     else{
         setupUI();
@@ -33,8 +30,13 @@ if(loginForm) {
         const password = loginForm['login-password'].value;
 
 
-        firebase.auth().signInWithEmailAndPassword(email, password).then(cred => {
-
+        firebase.auth().signInWithEmailAndPassword(email, password).then(user => {
+            window.location = "pictures.html";
+        })
+        .catch(error => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert("Email or Password is incorrect!");
         });
     });
 }
