@@ -45,3 +45,32 @@ function uploadFile()  {
 }
 
 /*READ FILES - PICTURES*/
+
+var database = firebase.database().ref().child('Posts/');
+database.once('value', function(snapshot){
+    if(snapshot.exists()){
+        var content = '';
+
+        snapshot.forEach(function(data){
+            var url = data.val().url;
+            var dimensions = data.val().dimensions;
+            var title = data.val().title;
+            var year = data.val().year;
+            var medium = data.val().year;
+            
+            content += '<div class="col-xl-4 col-xs-12 imageGrid">';
+            content += '<img class="myImg" src="'+url+'" width="300" height="200">';
+            content += '<div id="myModalPic" class="modal">';
+            content += '<span class="closeModal" onclick="document.getElementById(\'myModal\').style.display=\'none\'">&times;</span>';
+            content += '<img class="modal-content img">';
+            content += '<div class="caption">';
+            content += '<span>'+title+'</span>';
+            content += '<span>'+dimensions+'</span>';
+            content += '<span>'+medium+'</span>';
+            content += '</div>';
+            content += '</div>';
+            content += '</div>';
+        });
+        $('.displayImagesFromFirebase').append(content);
+    }
+});

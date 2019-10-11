@@ -11,7 +11,7 @@ const setupUI = (user) => {
     }
 }
 
-
+/*
 const setupGuides = (data) => {
 
 
@@ -34,3 +34,4 @@ const setupGuides = (data) => {
         
     }
 }
+*/

@@ -78,10 +78,10 @@
             
           
             <div class="container">
-                <div class="row">
+                <div class="row displayImagesFromFirebase">
                     <div class="col-xl-4 col-xs-12 imageGrid">
                             
-                            <img class="myImg" src="../Images/TestContainer.png" alt="Monir Arms Crossed" width="300" height="200">
+                            <img class="myImg" src="../Images/TestContainer.png" alt="Test" width="300" height="200">
                             <div id="myModalPic" class="modal">
                             <span class="closeModal" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
                               <img class="modal-content img">
@@ -94,84 +94,18 @@
                     </div>
                     <div class="col-xl-4 col-xs-12 imageGrid">
                             
-                            <img class="myImg" src="../Images/TestContainer.png" alt="Monir Arms Crossed" width="300" height="200">
-                            <div id="myModalPic" class="modal">
-                            <span class="closeModal" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-                              <img class="modal-content img">
-                              <div class="caption">
-                                  <span>Title: </span></br>
-                                  <span>Dimensions: </span></br>
-                                  <span>Medium:<span>
-                                </div>
-                            </div>  
-                    </div>
-                    <div class="col-xl-4 col-xs-12 imageGrid">
-                            
-                            <img class="myImg" src="../Images/bioImage.png" alt="Monir Arms Crossed" width="300" height="200">
-                            <div id="myModalPic" class="modal">
-                            <span class="closeModal" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-                              <img class="modal-content img">
-                              <div class="caption">
-                                  <span>Title: </span></br>
-                                  <span>Dimensions: </span></br>
-                                  <span>Medium:<span>
-                                </div>
-                            </div>  
-                    </div>
-                    <div class="col-xl-4 col-xs-12 imageGrid">
-                            
-                            <img class="myImg" src="../Images/TestContainer.png" alt="Monir Arms Crossed" width="300" height="200">
-                            <div id="myModalPic" class="modal">
-                            <span class="closeModal" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-                              <img class="modal-content img">
-                              <div class="caption">
-                                  <span>Title: </span></br>
-                                  <span>Dimensions: </span></br>
-                                  <span>Medium:<span>
-                                </div>
-                            </div>  
-                    </div>
-                    <div class="col-xl-4 col-xs-12 imageGrid">
-                            
-                            <img class="myImg" src="../Images/TestContainer.png" alt="Monir Arms Crossed" width="300" height="200">
-                            <div id="myModalPic" class="modal">
-                            <span class="closeModal" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-                              <img class="modal-content img">
-                              <div class="caption">
-                                  <span>Title: </span></br>
-                                  <span>Dimensions: </span></br>
-                                  <span>Medium:<span>
-                                </div>
-                            </div>  
-                    </div>
-                    <div class="col-xl-4 col-xs-12 imageGrid">
-                            
-                            <img class="myImg" src="../Images/TestContainer.png" alt="Monir Arms Crossed" width="300" height="200">
-                            <div id="myModalPic" class="modal">
-                            <span class="closeModal" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-                              <img class="modal-content img">
-                              <div class="caption">
-                                  <span>Title: </span></br>
-                                  <span>Dimensions: </span></br>
-                                  <span>Medium:<span>
-                                </div>
-                            </div>  
-                    </div>
-                    <div class="col-xl-4 col-xs-12 imageGrid">
-                            
-                            <img class="myImg" src="../Images/TestContainer.png" alt="Monir Arms Crossed" width="300" height="200">
-                            <div id="myModalPic" class="modal">
-                            <span class="closeModal" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-                              <img class="modal-content img">
-                              <div class="caption">
-                                  <span>Title: </span></br>
-                                  <span>Dimensions: </span></br>
-                                  <span>Medium:<span>
-                                </div>
-                            </div>  
-                    </div>
-                    
-                         
+                        <img class="myImg" src="../Images/TestContainer.png" alt="Test" width="300" height="200">
+                        <div id="myModalPic" class="modal">
+                        <span class="closeModal" onclick="document.getElementsByClassName('myModalPic').style.display='none'">&times;</span>
+                          <img class="modal-content img">
+                          <div class="caption">
+                              <span>Title: </span></br>
+                              <span>Dimensions: </span></br>
+                              <span>Medium:<span>
+                            </div>
+                        </div>  
+                </div>
+                       
                 </div>
             </div>
 
@@ -216,9 +150,9 @@
         <script type="text/javascript" src="../Scripts/login.js"></script>
         <script type="text/javascript" src="../Scripts/crud.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script>
 
-
+  <script>
+//This script is responsible for the nested drop-down in the side-nav
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
 
@@ -233,13 +167,14 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
-</script>
+  </script>
 
-<script>
+  <script>
 // Get the modal
 var modal = document.getElementById('myModalPic');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
+//var modal = $('.myModalPic')
 var img = $('.myImg');
 var modalImg = $(".img");
 var imageInfo = $('.imageInformation');
@@ -259,6 +194,6 @@ span.onclick = function() {
   modal.style.display = "none";
 }
             
-        </script>
+  </script>
 </body>
 </html>
