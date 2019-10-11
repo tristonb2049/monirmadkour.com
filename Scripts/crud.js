@@ -61,7 +61,7 @@ database.once('value', function(snapshot){
             content += '<div class="col-xl-4 col-xs-12 imageGrid">';
             content += '<img class="myImg" src="'+url+'" width="300" height="200">';
             content += '<div id="myModalPic" class="modal">';
-            content += '<span class="closeModal" onclick="document.getElementById(\'myModal\').style.display=\'none\'">&times;</span>';
+            content += '<span class="closeModal">&times;</span>';
             content += '<img class="modal-content img">';
             content += '<div class="caption">';
             content += '<span>'+title+'</span>';
