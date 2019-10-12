@@ -1,5 +1,5 @@
 /*UPLOAD FILES -- PICTURES*/
-
+var uploader = document.getElementById("uploadPic");
 var selectedFile;
 
 $("#file").on("change", function(event){
@@ -13,6 +13,8 @@ function uploadFile()  {
     var uploadTask = storageRef.put(selectedFile);
 
     uploadTask.on('state_changed', function(snapshot){
+        var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        uploader.value = percentage
 
     }, function(error){
 
