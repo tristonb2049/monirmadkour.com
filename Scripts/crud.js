@@ -59,13 +59,13 @@ database.once('value', function(snapshot){
             var medium = data.val().year;
             
             content += '<div class="col-xl-4 col-xs-12 imageGrid">';
-            content += '<img class="myImg" src="'+url+'" width="300" height="200">';
-            content += '<div id="myModalPic" class="modal">';
+            content += '<img class="myImg" src="'+url+'" width="300" height="200" alt="'+title+'">';
+            content += '<div class="modal" id="myModalPic">';
             content += '<span class="closeModal">&times;</span>';
             content += '<img class="modal-content img">';
             content += '<div class="caption">';
-            content += '<span>'+title+'</span>';
-            content += '<span>'+dimensions+'</span>';
+            content += '<span>'+title+'</span></br>';
+            content += '<span>'+dimensions+'</span></br>';
             content += '<span>'+medium+'</span>';
             content += '</div>';
             content += '</div>';

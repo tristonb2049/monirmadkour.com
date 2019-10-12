@@ -69,7 +69,7 @@
           
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" id="uploadButton" onclick="uploadFile()">Submit</button>
+                  <button type="reload" class="btn btn-primary" id="uploadButton" onclick="uploadFile()">Submit</button>
                 </div>
           
               </div>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="col-xl-4 col-xs-12 imageGrid">
                             
-                        <img class="myImg" src="../Images/TestContainer.png" alt="Test" width="300" height="200">
+                        <img class="myImg" src="../Images/bioImage.png" alt="Test" width="300" height="200">
                         <div id="myModalPic" class="modal">
                         <span class="closeModal">&times;</span>
                           <img class="modal-content img">
@@ -171,6 +171,8 @@ for (i = 0; i < dropdown.length; i++) {
 
   <script>
 // Get the modal
+
+window.onload = function(){
 var modal = document.getElementById('myModalPic');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -193,7 +195,7 @@ var span = document.getElementsByClassName("closeModal")[0];
 span.onclick = function() {
   modal.style.display = "none";
 }
-            
+}     
   </script>
 </body>
 </html>
