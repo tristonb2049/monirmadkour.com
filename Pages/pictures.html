@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" href="../Styles/lightbox.css" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -68,6 +69,9 @@
                   </label>
                 </div>
           
+
+                
+
                 <!-- Modal footer -->
                 <div class="modal-footer">
                   <progress class="w3-green" value="0"  max="100" id="uploadPic">0%</progress>
@@ -79,37 +83,19 @@
           </div>
             
           
-            <div class="container">
-                <div class="row displayImagesFromFirebase">
-                    <div class="col-xl-4 col-xs-12 imageGrid">
-                            
-                            <img class="myImg" src="../Images/TestContainer.png" alt="Test" width="300" height="200">
-                            <div id="myModalPic" class="modal">
-                            <span class="closeModal">&times;</span>
-                              <img class="modal-content img">
-                              <div class="caption">
-                                  <span>Title: </span></br>
-                                  <span>Dimensions: </span></br>
-                                  <span>Medium:<span>
-                                </div>
-                            </div>  
+          <div class="container">
+              <div class="row displayImagesFromFirebase">
+                  <div class="col-xl-4 col-xs-12 imageGrid">
+                    
+                    <a class="example-image-link" href="../Images/bioImage.png" data-lightbox="example-1">
+                      <img class="example-image" width="300" height="200" src="../Images/bioImage.png" alt="image-1" /></a>
+              
+                    
                     </div>
-                    <div class="col-xl-4 col-xs-12 imageGrid">
-                            
-                        <img class="myImg" src="../Images/bioImage.png" alt="Test" width="300" height="200">
-                        <div id="myModalPic" class="modal">
-                        <span class="closeModal">&times;</span>
-                          <img class="modal-content img">
-                          <div class="caption">
-                              <span>Title: </span></br>
-                              <span>Dimensions: </span></br>
-                              <span>Medium:<span>
-                            </div>
-                        </div>  
-                </div>
-                       
-                </div>
+                  </div>
             </div>
+        
+       
 
         <div class="container">
                 <div class="col-xl-12 text-right admin">
@@ -146,12 +132,14 @@
           var storage = firebase.storage();
           
       </script>
+      
       <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
         <script type="text/javascript" src="../Scripts/auth.js"></script>
         <script type="text/javascript" src="../Scripts/Scripts.js"></script>
         <script type="text/javascript" src="../Scripts/login.js"></script>
         <script type="text/javascript" src="../Scripts/crud.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../Scripts/lightbox.js"></script>
 
   <script>
 //This script is responsible for the nested drop-down in the side-nav
@@ -169,35 +157,6 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
-  </script>
-
-  <script>
-// Get the modal
-
-window.onload = function(){
-var modal = document.getElementById('myModalPic');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-//var modal = $('.myModalPic')
-var img = $('.myImg');
-var modalImg = $(".img");
-var imageInfo = $('.imageInformation');
-var captionText = document.getElementsByClassName("caption");
-$('.myImg').click(function(){
-    modal.style.display = "block";
-    var newSrc = this.src;
-    modalImg.attr('src', newSrc);
-    //captionText.innerHTML = this.imageInfo.innerHTML;
-});
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("closeModal")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-}     
   </script>
 </body>
 </html>
