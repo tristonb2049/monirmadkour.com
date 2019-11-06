@@ -308,5 +308,14 @@ cursor: pointer;
     width: 100%;
 }
 }
+#adminTitle{
+    color: white !important;
+}
+.labels{
+    color:white;
+}
+#email{
+    padding-right: 28px;
+}
 
   

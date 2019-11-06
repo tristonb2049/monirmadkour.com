@@ -16,21 +16,21 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="col-xl-12 text-center">
-            <h4>Admin Login</h4>
+    <div class="container" >
+        <div class="col-xl-12 text-center loginText" style="margin-top: 10px;">
+            <h4 id="adminTitle">Admin Login</h4>
             <div class="col-xl-12">
                 <form id="login-form">
                     <div class="input-field">
                         <input type="email" id="login-email" required />
-                        <label for="login-email">Email Address</label>
+                        <label class="labels" id="email" for="login-email">Email</label>
                     </div>
                     <div class="input-field">
                         <input type="password" id="login-password" required />
-                        <label for="login-password">Password</label>
+                        <label for="login-password" class="labels">Password</label>
                     </div>
-                    <button class="log-in">Log In</button>
-                    <button onclick="window.location.href ='../index.html';">Return Home</button>
+                    <button class="btn btn-dark log-in" style="margin-top: 20px;">Log In</button>
+
                 </form>
             </div>
         </div>
