@@ -317,5 +317,11 @@ cursor: pointer;
 #email{
     padding-right: 28px;
 }
-
-  
+.imageButton{
+    padding: 3px !important;
+    
+    border-radius: 0px !important;
+}
+.logged-inX{
+    display: none;
+}
