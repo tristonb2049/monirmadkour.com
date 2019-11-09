@@ -1,9 +1,10 @@
 //Read data from DB and display to all users
+/*
 firebase.firestore().collection('photos').get().then(snapshot => {
     setupGuides(snapshot.docs);
     
     });
-
+*/
 //Listen for authorization changes
 firebase.auth().onAuthStateChanged(user => {
 

@@ -1,17 +1,22 @@
 const guideList = document.querySelector('.admin');
-const loggedIn = document.querySelectorAll('.logged-in');
-const loggedInX = document.querySelectorAll('.logged-inX');
+
 
 const setupUI = (user) => {
+
+    const loggedIn = document.querySelectorAll('.logged-in');
+    const loggedInX = document.querySelectorAll('.logged-inX');
+    
     if(user){
         //toggle UI elements
         loggedIn.forEach(item => item.style.display = 'block');
-        console.log(loggedInX);
-        loggedInX.forEach(item => item.style.display = 'inline-block');
+        loggedInX.forEach(item => item.style.display = 'block');
+
     }
     else{
         loggedIn.forEach(item => item.style.display = 'none');
         loggedInX.forEach(item => item.style.display = 'none');
+       
+
     }
 }
 

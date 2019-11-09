@@ -57,13 +57,13 @@ database.once('value', function(snapshot){
             var medium = data.val().year;
             
             content += '<div class="col-xl-4 col-xs-12 imageGrid">';
-            content += '<a class="example-image-link" href="'+url+'" data-lightbox="example-1 '+counter+'"><img class="example-image" width="300" height="200" src="'+url+'" alt="image-1"/></a><button class="btn btn-danger imageButton logged-inX">x</button>';
-            content += '</div>';
-            content += '</div>';
+            content += '<a class="example-image-link" href="'+url+'" data-lightbox="example-1 '+counter+'"><img class="example-image" width="300" height="200" src="'+url+'" alt="image-1"/></a>';
+            content += '<button class="imageButton logged-inX">x</button>';
             content += '</div>';
             counter++;
         });
         $('.displayImagesFromFirebase').append(content);
+            setupUI(firebase.auth().currentUser);
     }
 });
 
