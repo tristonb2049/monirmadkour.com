@@ -9,7 +9,7 @@ const setupUI = (user) => {
     if(user){
         //toggle UI elements
         loggedIn.forEach(item => item.style.display = 'block');
-        loggedInX.forEach(item => item.style.display = 'block');
+        loggedInX.forEach(item => item.style.display = 'inline-block');
 
     }
     else{
