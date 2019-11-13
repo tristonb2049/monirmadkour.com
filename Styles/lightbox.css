@@ -9,7 +9,7 @@ body.lb-disable-scrolling {
   z-index: 9999;
   background-color: black;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  opacity: 0.88;
   display: none;
 }
 
@@ -164,9 +164,9 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-caption {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
-  line-height: 1em;
+  line-height: 2em;
 }
 
 .lb-data .lb-caption a {
@@ -190,7 +190,7 @@ body.lb-disable-scrolling {
   text-align: right;
   outline: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
+  opacity: 0.9;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;

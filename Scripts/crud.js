@@ -33,7 +33,8 @@ function uploadFile()  {
         title: $('#imageTitle').val(),
         medium: $('#imageMedium').val(),
         dimensions: $('#imageDimensions').val(),
-        year: $('#imageYear').val()
+        year: $('#imageYear').val(),
+        additional: $('#additionalInfo').val()
     };
     updates['/Posts/' + postkey] = postData;
     firebase.database().ref().update(updates);
@@ -57,10 +58,11 @@ database.once('value', function(snapshot){
             var dimensions = data.val().dimensions;
             var title = data.val().title;
             var year = data.val().year;
-            var medium = data.val().year;
+            var medium = data.val().medium;
+            var additional = data.val().additional;
             
             content += '<div class="col-xl-4 col-xs-12 imageGrid" id="'+keyVal+'">';
-            content += '<a class="example-image-link" href="'+url+'" data-lightbox="example-1 '+counter+'"><img class="example-image" width="300" height="200" src="'+url+'" alt="image-1"/></a>';
+            content += '<a class="example-image-link" href="'+url+'" data-title="'+title+'&lt;br /&gt;'+medium+'&lt;br /&gt;'+dimensions+'&lt;br /&gt;'+year+'&lt;br /&gt;'+additional+'&lt;br /&gt;'+'" data-lightbox="example-1 '+counter+'"><img class="example-image" width="300" height="200" src="'+url+'" alt="'+title+'"/></a>';
             content += '<button class="btn btn-danger imageButton logged-inX" onclick="deleteFile(this)">x</button>';
             content += '</div>';
             counter++;
