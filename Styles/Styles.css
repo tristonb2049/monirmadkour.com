@@ -221,9 +221,14 @@ body{
 #email{
     padding-right: 28px;
 }
-.imageButton{
+.deleteButton{
     padding: 3px;
     border-radius: 0px;
+}
+.editButton{
+    padding: 5px !important ;
+    border-radius: 0px;
+
 }
 #additionalInfo{
     margin-top: 5px;

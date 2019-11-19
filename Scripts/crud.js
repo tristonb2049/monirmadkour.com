@@ -63,7 +63,8 @@ database.once('value', function(snapshot){
             
             content += '<div class="col-xl-4 col-xs-12 imageGrid" id="'+keyVal+'">';
             content += '<a class="example-image-link" href="'+url+'" data-title="'+title+'&lt;br /&gt;'+medium+'&lt;br /&gt;'+dimensions+'&lt;br /&gt;'+year+'&lt;br /&gt;'+additional+'&lt;br /&gt;'+'" data-lightbox="example-1 '+counter+'"><img class="example-image" width="300" height="200" src="'+url+'" alt="'+title+'"/></a>';
-            content += '<button class="btn btn-danger imageButton logged-inX" onclick="deleteFile(this)">x</button>';
+            content += '</br><button class="btn btn-danger deleteButton logged-inX" onclick="deleteFile(this)">x</button>';
+            content += '<button class="btn btn-light editButton logged-inX" onclick="editFile(this)">&#9998;</button>';
             content += '</div>';
             counter++;
             idCounter++;
@@ -91,4 +92,6 @@ if(sure){
   };
     
 
-
+function editFile(element){
+    
+}
