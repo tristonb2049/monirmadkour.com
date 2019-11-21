@@ -224,10 +224,12 @@ body{
 .deleteButton{
     padding: 3px;
     border-radius: 0px;
+    margin-right: 2px;
 }
 .editButton{
     padding: 5px !important ;
     border-radius: 0px;
+    margin-left: 2px;
 
 }
 #additionalInfo{

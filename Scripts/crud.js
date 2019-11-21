@@ -44,7 +44,7 @@ function uploadFile()  {
 
 }
 
-/*UPLOAD PIC & DATA TO REALTIME- PICTURES*/
+/*READ PIC & DATA FROM REALTIME- PICTURES*/
 
 var database = firebase.database().ref().child('Posts/');
 database.once('value', function(snapshot){
@@ -64,7 +64,7 @@ database.once('value', function(snapshot){
             content += '<div class="col-xl-4 col-xs-12 imageGrid" id="'+keyVal+'">';
             content += '<a class="example-image-link" href="'+url+'" data-title="'+title+'&lt;br /&gt;'+medium+'&lt;br /&gt;'+dimensions+'&lt;br /&gt;'+year+'&lt;br /&gt;'+additional+'&lt;br /&gt;'+'" data-lightbox="example-1 '+counter+'"><img class="example-image" width="300" height="200" src="'+url+'" alt="'+title+'"/></a>';
             content += '</br><button class="btn btn-danger deleteButton logged-inX" onclick="deleteFile(this)">x</button>';
-            content += '<button class="btn btn-light editButton logged-inX" onclick="editFile(this)">&#9998;</button>';
+            content += '<button class="btn btn-light editButton logged-inX" data-toggle="modal" data-target="#myModalUpdate" onclick="getUpdateId(this)">&#9998;</button>';
             content += '</div>';
             counter++;
             idCounter++;
@@ -92,6 +92,31 @@ if(sure){
   };
     
 
-function editFile(element){
-    
+
+
+function getUpdateId(element){
+
+    var postId = $(element).closest('div').attr('id');
+    console.log(postId);
+    var submit = document.getElementById("uploadButtonUpdate");
+
+    submit.onclick = function(){
+
+        var postData = {
+
+            title: $('#imageTitleUpdate').val(),
+            medium: $('#imageMediumUpdate').val(),
+            dimensions: $('#imageDimensionsUpdate').val(),
+            year: $('#imageYearUpdate').val(),
+            additional: $('#additionalInfoUpdate').val()
+        };
+        
+        firebase.database().ref().child('Posts/' + postId).update(postData).then(function(){
+            location.reload();
+        });
+    }
 }
+
+
+
+
