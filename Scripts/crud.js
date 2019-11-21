@@ -91,8 +91,7 @@ if(sure){
    }
   };
     
-
-
+/*-----------------------------------UPDATE DATABASE DATA--------------------------------------------------------------*/
 
 function getUpdateId(element){
 
@@ -111,12 +110,12 @@ function getUpdateId(element){
             additional: $('#additionalInfoUpdate').val()
         };
         
-        firebase.database().ref().child('Posts/' + postId).update(postData).then(function(){
+        for (data in postData){
+            if(postData[data] != null){
+            firebase.database().ref().child('Posts/' + postId).update(postData);
+            }
+        }
             location.reload();
-        });
+        
     }
 }
-
-
-
-
