@@ -235,3 +235,13 @@ body{
 #additionalInfo{
     margin-top: 5px;
 }
+.videoGrid{
+    text-align: center;
+    border-bottom: 2px grey;
+}
+.videoCaption{
+    color: #999999;
+    text-align: justify;
+    font-weight: bold;
+    white-space: pre;
+}

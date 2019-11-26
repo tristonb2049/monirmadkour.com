@@ -26,7 +26,7 @@ if(loginForm) {
 
 
         firebase.auth().signInWithEmailAndPassword(email, password).then(user => {
-            window.location = "pictures.html";
+            window.location = "../index.html";
         })
         .catch(error => {
             var errorCode = error.code;
