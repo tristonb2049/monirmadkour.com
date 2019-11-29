@@ -241,7 +241,10 @@ body{
 }
 .videoCaption{
     color: #999999;
-    text-align: justify;
+    justify-content: center;
     font-weight: bold;
     white-space: pre;
+}
+video{
+    outline:none;
 }

@@ -30,10 +30,6 @@ function uploadFile()  {
     var postData = {
         url: downloadURL,
         keyVal: postkey,
-        title: $('#videoTitle').val(),
-        medium: $('#videoMedium').val(),
-        dimensions: $('#videoDimensions').val(),
-        year: $('#videoYear').val(),
         additional: $('#additionalInfo').val()
     };
     updates['/Videos/' + postkey] = postData;
@@ -53,16 +49,13 @@ database.once('value', function(snapshot){
         var counter=0;
         var idCounter = 0;
         snapshot.forEach(function(data){
+            
             var url = data.val().url;
             var keyVal = data.val().keyVal;
-            var dimensions = data.val().dimensions;
-            var title = data.val().title;
-            var year = data.val().year;
-            var medium = data.val().medium;
             var additional = data.val().additional;
             
             content += '<div class="col-xl-12 col-xs-12 videoGrid" id="'+keyVal+'">';
-            content += '<video controls src="'+url+'" width="100%" height="500px">';
+            content += '<video controls src="'+url+'" width="100%" height="490px">';
             content += '</video>';
             content += '<p class="videoCaption">'+additional+'</p>';
             content += '</br><button class="btn btn-danger deleteButton logged-inX" onclick="deleteFile(this)">x</button>';
@@ -104,11 +97,6 @@ function getUpdateId(element){
     submit.onclick = function(){
 
         var postData = {
-
-            title: $('#videoTitleUpdate').val(),
-            medium: $('#videoMediumUpdate').val(),
-            dimensions: $('#videoDimensionsUpdate').val(),
-            year: $('#videoYearUpdate').val(),
             additional: $('#additionalInfoUpdate').val()
         };
         
