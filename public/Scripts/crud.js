@@ -51,7 +51,7 @@ database.once('value', function(snapshot){
     if(snapshot.exists()){
         var content = '';
         var counter=0;
-        var idCounter = 0;
+        
         snapshot.forEach(function(data){
             var url = data.val().url;
             var keyVal = data.val().keyVal;
@@ -67,7 +67,7 @@ database.once('value', function(snapshot){
             content += '<button class="btn btn-light editButton logged-inX" data-toggle="modal" data-target="#myModalUpdate" onclick="getUpdateId(this)">&#9998;</button>';
             content += '</div>';
             counter++;
-            idCounter++;
+            
         });
         $('.displayImagesFromFirebase').append(content);
             setupUI(firebase.auth().currentUser);
