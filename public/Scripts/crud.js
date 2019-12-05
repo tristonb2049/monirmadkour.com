@@ -61,7 +61,7 @@ database.once('value', function(snapshot){
             var medium = data.val().medium;
             var additional = data.val().additional;
             
-            content += '<div class="col-xl-4 col-xs-12 imageGrid" id="'+keyVal+'">';
+            content += '<div class="col-xl-4 col-lg-6 col-md-6 col-xs-12 imageGrid" id="'+keyVal+'">';
             content += '<a class="lazy example-image-link" href="'+url+'" data-title="'+title+'&lt;br /&gt;'+medium+'&lt;br /&gt;'+dimensions+'&lt;br /&gt;'+year+'&lt;br /&gt;'+additional+'&lt;br /&gt;'+'" data-lightbox="example-1 '+counter+'"><img class="lazy example-image" width="300" height="200" src="'+url+'" alt="'+title+'"/></a>';
             content += '</br><button class="btn btn-danger deleteButton logged-inX" onclick="deleteFile(this)">x</button>';
             content += '<button class="btn btn-light editButton logged-inX" data-toggle="modal" data-target="#myModalUpdate" onclick="getUpdateId(this)">&#9998;</button>';
